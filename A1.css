@@ -1,0 +1,236 @@
+body {
+    position:relative;
+    background-color: #eee3d4;
+    font-family: 'Pangolin', cursive;
+    color: #723009;
+    font-size:1.5vw;
+    line-height: 1.6;
+    margin:0;
+
+}
+body text {
+    position: absolute;
+    display: inline-block;
+    width: 90%;
+}
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 130%;
+  background-image: url('paper texture.png');
+  background-repeat: repeat;
+  opacity: 60%; 
+  mix-blend-mode: multiply;
+  pointer-events: none; /*play button can't run without this shit*/
+}
+img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: inline-block;
+}
+#audio-controls {
+    top: 0;
+    z-index: 3; /* ensure it's on top */
+    padding: 10px;
+}
+#play-btn {
+    padding: 8px 16px;
+    font-family: 'Pangolin', cursive;
+    font-size: 1.5vw;
+    background-color: #e4af89;
+    color: #723009;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+/*text*/
+.đoạn1 {
+    position: absolute;
+    top:17%;
+    left: 73%;
+    transform: translateX(-50%);
+    text-align: center;
+    width:fit-content;
+}
+.đoạn2 {
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 1;
+}
+.đoạn3 {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.đoạn4-1 {
+    position: absolute;
+    top: 60.2%;
+    left: 10%;
+    text-align: center;
+}
+.đoạn4-2 {
+    position: absolute;
+    top:70%;
+    left: 57%;
+    text-align: center;
+}
+.đoạn5 {
+    position: absolute;
+    top: 73%;
+    left: 7%;
+    text-align: center;
+}
+.đoạn6 {
+    position: absolute;
+    top: 88%;
+    left: 20%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.đoạn7 {
+    position: absolute;
+    bottom: -4%;
+    left: 70%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.missing {
+    position: absolute;
+    bottom: -6.8%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.đoạn8 {
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+    bottom: -24%;
+    left: 38%;
+}
+/*image*/
+.container2 {
+    position:static;
+}
+#bgngua,#xe {
+    position: absolute;
+}
+#ngua {
+    left: 40%;
+}
+#xe {
+    position: absolute;
+    width: 8%;
+    left: 127.5%;
+    top: 37.6%;
+    transition: transform linear;
+}
+#section3 {
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+.container4 {
+    position: relative;
+    top: 10%;
+}
+#section4-2 {
+    position: absolute;
+    bottom: 55%;
+    left: 50%;
+    width: 40%;
+    z-index: 1;
+}
+.section4-3 {
+    position: absolute;
+    bottom: 54%;
+    left: 61%;
+    width: 30%;
+    z-index: 1;
+  }
+
+.section4-3:hover {
+    animation: bounce 0.6s ease infinite;
+  }
+.container5 {
+    position: relative;
+}
+#section5-2 {
+    position: absolute;
+    bottom: 15%;
+    left: 9.6%;
+    width: 15%;
+    z-index: 1;
+    transition: transform 0.3s ease;
+
+}
+#section5-2.moved-up {
+    transform: translateY(-20px); /* move up */
+}
+
+#section5-2.moved-down {
+    transform: translateY(10px);  /* move down */
+}
+#section5-3 {
+    position: absolute;
+    left: 2.2%;
+    z-index: 2;
+}
+.container6 {
+    position: relative;
+}
+#section6-2 {
+    position: absolute;
+    top: 90%;
+    left: -2%;
+    width: 50%;
+    height: auto;
+    z-index: 0;
+}
+#section6-3 {
+    position: absolute;
+    top: 90%;
+    left: -2%;
+    width: 50%;
+    height: auto;
+    opacity: 0; /* hidden by default */
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
+#section6-3:hover {
+    opacity: 100%;
+}
+#section7 {
+    position: absolute;
+    left: 0;
+    bottom:  -18%;
+}
+#section8 {
+    position: absolute;
+    left: 0;
+    z-index: 0;
+    bottom: -30%;
+}
+
+/*animation*/
+@keyframes bounce {
+    0%   { transform: translateY(0); }
+    30%  { transform: translateY(-10px); }
+    60%  { transform: translateY(5px); }
+    100% { transform: translateY(0); }
+}
+@keyframes letter {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+  }
